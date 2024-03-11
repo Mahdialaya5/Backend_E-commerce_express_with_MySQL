@@ -39,7 +39,7 @@ exports.login = async(req, res) => {
         const isMatched = await bcrypt.compare(password, existpassword)
 
         if (!isMatched) {
-            return res.status(400).send({ msg: "badp credential !!" })
+            return res.status(400).send({ msg: "bad credential !!" })
         }
         existUser[0][0].password_user=undefined
          const exist_id=existUser[0][0].id

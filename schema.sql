@@ -30,9 +30,9 @@ CREATE TABLE orders(
 );
 CREATE TABLE order_details(
     id INT AUTO_INCREMENT PRIMARY KEY ,
-    product_id  INT ,
+    product  VARCHAR(250) NOT NULL ,
     user_id INT 
         FOREIGN KEY (user_id) REFERENCES users(id)
-        FOREIGN KEY (product_id) REFERENCES products(id)
+        FOREIGN KEY (product) REFERENCES products(product_name)
    
 );
