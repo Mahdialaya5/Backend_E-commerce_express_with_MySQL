@@ -1,4 +1,17 @@
-{  
+{"definition": {
+  "openapi": "3.0.0",
+  "info": {
+     "title": "E_commerce_api",
+     "version": "1.0.0"
+    },
+  "server": [
+      {" api": "http://localhost:3000/"
+      }
+    ]
+  },
+"apis": [
+    "./server.js"
+  ],
   "paths": {
     "/products": {
       "get": {

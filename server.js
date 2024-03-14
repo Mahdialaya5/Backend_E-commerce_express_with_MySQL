@@ -16,23 +16,8 @@ const corsOptions = {
    optionSuccessStatus: 200,
 }
 
-const options={
-   definition:{
-      openapi:"3.0.0",
-      info:{
-         title:"E_commerce_api",
-         version:"1.0.0"
-      },
-      server:[
-        { api:"http://localhost:3000/"}
 
-      ]
-   },
-   apis:["./server.js"],
-   swaggerDocument
-  
-}
-const swagger=swaggerjsdoc(options)
+const swagger=swaggerjsdoc(swaggerDocument)
 app.use(cors(corsOptions))
 app.use("/uploads",express.static(__dirname+"/uploads"))
 app.use(express.json());
