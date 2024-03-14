@@ -8,7 +8,7 @@ const orderRouter=require('./routes/OrderRoute')
 const cors = require("cors");
 const swaggerjsdoc=require("swagger-jsdoc")
 const swaggerUi = require("swagger-ui-express");
-//const swaggerDocument = require("./swagger.json");
+const swaggerDocument = require("./swagger.json");
 
 const corsOptions = {
    origin: '*',
@@ -29,6 +29,7 @@ const options={
       ]
    },
    apis:["./server.js"],
+   swaggerDocument
   
 }
 const swagger=swaggerjsdoc(options)

@@ -1,2 +1,121 @@
-
- 
+{  
+  "paths": {
+    "/products": {
+      "get": {
+        "summary": "Get a list of products",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {
+                  "products": [
+                    {
+                      "id": 1,
+                      "name": "Product 1",
+                      "description": "This is the first product",
+                      "price": 19.99
+                    },
+                    {
+                      "id": 2,
+                      "name": "Product 2",
+                      "description": "Another product description",
+                      "price": 29.99
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new product",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "name": "New Product",
+                "description": "This is a new product",
+                "price": 24.99
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Product created successfully",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": 3,
+                  "name": "New Product",
+                  "description": "This is a new product",
+                  "price": 24.99
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "summary": "Get a list of users",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "example": {
+                  "users": [
+                    {
+                      "id": 1,
+                      "username": "user1",
+                      "email": "user1@example.com"
+                    },
+                    {
+                      "id": 2,
+                      "username": "user2",
+                      "email": "user2@example.com"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "username": "new_user",
+                "email": "new_user@example.com",
+                "password": "password123"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created successfully",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": 3,
+                  "username": "new_user",
+                  "email": "new_user@example.com"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
